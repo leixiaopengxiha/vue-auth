@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+// import store from '@/store'
 Vue.use(VueRouter)
 export const routerMap = [{
     path: '/home',
@@ -10,14 +10,25 @@ export const routerMap = [{
     meta: {
       title: '首页',
     },
-    children: [{
-      path: 'home_index',
-      name: 'home_index',
-      meta: {
-        title: '首页',
+    children: [
+
+      {
+        path: 'home_index',
+        name: 'home_index',
+        meta: {
+          title: '首页可视对讲上课',
+        },
+        component: () => import('@/views/home-index'),
       },
-      component: () => import('@/views/home-index'),
-    }, ],
+      {
+        path: 'home_index1',
+        name: 'home_index1',
+        meta: {
+          title: '首页撒大声地',
+        },
+        component: () => import('@/views/home-index1'),
+      },
+    ],
   },
 
   {
@@ -68,9 +79,11 @@ const routes = [{
     component: () => import('@/views/error_404.vue')
   }
 ]
-
+// console.log(store.state.route.routeList);
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
+// console.log(router);
 
 export default router
