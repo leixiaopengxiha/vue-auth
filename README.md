@@ -1,19 +1,8 @@
-# kaoshi
+# 路由权限
 
-## Project setup
-```
-npm install
-```
+管理员 用户
+商品 商品信息
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## npm i mock axios
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+下载 mock 模拟数据
