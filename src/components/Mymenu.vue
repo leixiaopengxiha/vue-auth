@@ -34,19 +34,10 @@ export default {
   },
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath)
-      let kespaths = keyPath[0]
-      if (keyPath.length > 1) {
-        keyPath.map((item, index) => {
-          if (index > 0) {
-            kespaths = `${kespaths}/${item}`
-          }
-        })
-      }
-      this.kespaths = kespaths
+      // console.log(key, keyPath)
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath)
+      // console.log(key, keyPath)
     }
   }
 }

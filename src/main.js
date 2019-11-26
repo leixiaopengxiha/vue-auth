@@ -24,7 +24,7 @@ router.beforeEach(async (to, from, next) => {
     next()
   }
 })
-// 定义自定义组件
+// 定义自定义组件指令
 Vue.directive('has', {
   // 当被绑定的元素插入到 DOM 中时……
   inserted: function (el, binding, vnode) {
