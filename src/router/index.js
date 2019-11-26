@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 // import store from '@/store'
 Vue.use(VueRouter)
+
 export const routerMap = [{
     path: '/home',
     name: 'home',
@@ -10,24 +11,23 @@ export const routerMap = [{
     meta: {
       title: '首页',
     },
-    children: [
-
-      {
-        path: 'home_index',
+    children: [{
+        path: '/home_index',
         name: 'home_index',
         meta: {
-          title: '首页可视对讲上课',
+          title: '首页1',
         },
         component: () => import('@/views/home-index'),
+        children: [{
+          path: '/home_index1',
+          name: 'home_index1',
+          meta: {
+            title: '首页2',
+          },
+          component: () => import('@/views/home-index1'),
+        }, ]
       },
-      {
-        path: 'home_index1',
-        name: 'home_index1',
-        meta: {
-          title: '首页撒大声地',
-        },
-        component: () => import('@/views/home-index1'),
-      },
+
     ],
   },
 
@@ -35,7 +35,7 @@ export const routerMap = [{
     path: '/count-to',
     name: 'count_to',
     meta: {
-      title: 'count_to',
+      title: '计数',
     },
     component: () => import('@/views/count-to.vue'),
   },
@@ -43,7 +43,7 @@ export const routerMap = [{
     path: '/upload',
     name: 'upload',
     meta: {
-      title: 'upload',
+      title: '更新',
     },
     component: () => import('@/views/upload.vue'),
   },
@@ -51,7 +51,7 @@ export const routerMap = [{
     path: '/form',
     name: 'form',
     meta: {
-      title: 'form',
+      title: '表单',
     },
     component: () => import('@/views/form.vue'),
   },
@@ -60,7 +60,7 @@ export const routerMap = [{
     path: '/store',
     name: 'store',
     meta: {
-      title: 'sotre',
+      title: '数据',
     },
     component: () => import('@/views/store.vue'),
   },

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import route from './modules/router'
+// import route from './modules/router'
 Vue.use(Vuex)
 
 const modulesFiles = require.context('./modules', true, /\.js$/)
@@ -23,6 +23,7 @@ export default new Vuex.Store({
     }
   },
   // actions: {},
+
 
   modules
   // modules: {

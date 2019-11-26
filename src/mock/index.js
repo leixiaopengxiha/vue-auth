@@ -7,7 +7,7 @@ function auth() {
             page: {
                 home: true,
                 home_index: true,
-                home_index1: false,
+                home_index1: true,
                 about: true,
                 argu: true,
                 count_to: true,
