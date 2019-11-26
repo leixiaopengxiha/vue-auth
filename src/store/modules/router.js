@@ -33,7 +33,7 @@ const mutations = {
     setMenuList(state, routers) {
         state.menuList = routers
     },
-    setComp(sata, payload) {
+    setComp(state, payload) {
         state.btnPermission.edit_button = payload.edit_button
         state.btnPermission.publish_button = payload.publish_button
     }
